@@ -104,3 +104,8 @@ Les decisions suivantes doivent etre respectees pendant le developpement :
 J'ai choisi que la date et l'heure soient remplies automatiquement quand j'ajoute une dépense. Je ne veux pas avoir à les saisir à chaque fois, parce que je risque de les oublier ou de faire une erreur.
 
 Par contre, il y a un inconvénient : si j'oublie d'enregistrer une dépense et que je le fais le lendemain, elle aura la date et l'heure du moment où je l'ajoute, et non celles du véritable achat. Pour la V1, j'accepte cette limite pour garder les choses simples.
+### Cle secrete Django
+
+J'ai choisi de conserver la cle secrete Django dans un fichier .env, et non directement dans settings.py. Le fichier .env est ignore par Git pour eviter de publier cette cle.
+
+Si la variable DJANGO_SECRET_KEY est absente, l'application doit s'arreter avec une erreur claire. Je prefere corriger la configuration plutot que de laisser Django utiliser une cle par defaut.
