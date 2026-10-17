@@ -1,0 +1,12 @@
+# Environnement virtuel
+.venv/
+
+# Bases de donnees SQLite
+db.sqlite3
+
+# Fichiers Python generes
+__pycache__/
+*.py[cod]
+
+# Fichiers locaux contenant des secrets
+.env
